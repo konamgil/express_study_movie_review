@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Movie Detail Info</title>
+</head>
+
+<body>
+    <h1> <%= title %> </h1>
+    <ul>
+      <li><h4> 제목 :  <%= movie.title %></h4></li>
+      <li><h4> 감독 :  <%= movie.director %></h4></li>
+      <li><h4> 연도 :  <%= movie.year %></h4></li>
+    </ul>
+    <h3>리뷰()</h3>
+    <ul>
+      <li></li>
+    </ul>
+    <form>
+      <input type='text' name='review' placeholder='내용을 입력하세요' />
+      <input type='submit' name='sendBtn' value="입력"/>
+    </form>
+</body>
+
+</html>

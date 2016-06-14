@@ -1,0 +1,16 @@
+<html>
+<head>
+   <meta charset="UTF-8" />
+    <title>EJS Example</title>
+</head>
+<body>
+    <h1> <%= title %> </h1>
+
+    <ul>
+        <% movie.forEach(function(item){ %>
+        <li> <a href='<%= item.id %>'>  <%= item.title %> </a></li>
+        <% }); %>
+    </ul>
+
+</body>
+</html>
