@@ -1,7 +1,9 @@
 //create server
 var express = require('express');
 var app = express();
-
+//로그 미들웨어 설정
+var morgan = require('morgan');
+app.use(morgan('dev'));
 //템플릿 엔진 설정
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -46,8 +48,8 @@ function handleError(err, req, res, next) {
 //   res.setHeader('Content-type','text/html')
 //   res.status(500).send('<h2>Error 500 - 없는 페이지입니다.</h2>');
 // });
-app.listen(7682,function () {
-  logger.info('포트번호는 7682 입니다')
+app.listen(7683,function () {
+  logger.info('포트번호는 7683 입니다')
 });
 
 
@@ -66,7 +68,3 @@ var logger =  new winston.Logger({
     })
   ]
 });
-
-//로그 미들웨어 설정
-var morgan = require('morgan');
-app.use(morgan('dev'));

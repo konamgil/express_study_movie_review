@@ -8,9 +8,9 @@
 
     <ul>
         <% data.forEach(function(item){ %>
-        <li> <a href='<%= item.movieId %>'>  <%= item.title %> </a></li>
+        <li> <a href='<%= item._id %>'>  <%= item.title %> </a></li>
         <% }); %>
     </ul>
-
+    <a href='/addmovie'>영화입력</a>
 </body>
 </html>
